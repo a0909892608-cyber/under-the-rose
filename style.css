@@ -1,0 +1,357 @@
+body {
+  margin: 0;
+  font-family: "Helvetica", "Arial", sans-serif;
+  background: #fffafc;
+  color: #333;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+header p {
+  color: #888;
+  margin-top: 5px;
+}
+
+/* hero */
+.hero {
+  height: 90vh;
+  background: url("https://images.unsplash.com/photo-1604654894610-df63bc536371") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* 黑色半透明遮罩（高級感關鍵） */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  top: 0;
+  left: 0;
+}
+
+.hero-content {
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+/* 按鈕排版 */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* 主按鈕 */
+.btn.primary {
+  background: white;
+  color: black;
+}
+
+/* 次按鈕 */
+.btn.secondary {
+  border: 1px solid white;
+}
+
+.hero-content {
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/*hero button*/
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 主按鈕 */
+.btn.primary {
+  background: white;
+  color: black;
+  padding: 14px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Hover 變色（關鍵） */
+.btn.primary:hover {
+  background: black;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* 右邊 icon 按鈕 */
+.icon-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+/* icon hover */
+.icon-btn:hover {
+  background: black;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Services */
+.services {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  margin-bottom: 30px;
+}
+
+.card {
+  background: white;
+  margin: 15px auto;
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.social {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fffafc;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+/* 通用按鈕 */
+.btn {
+  text-decoration: none;
+  padding: 14px 40px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Hover 浮起效果 */
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* IG 漸層 */
+.ig {
+  background: linear-gradient(45deg, #feda75, #d62976, #962fbf);
+}
+
+/* LINE */
+.line {
+  background: #06c755;
+}
+
+/* Threads（黑白極簡） */
+.threads {
+  background: black;
+  color: white;
+  border: 1px solid black;
+}
+
+.threads:hover {
+  background: white;
+  color: black;
+}
+
+
+.booking {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.booking form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking input,
+.booking select {
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.booking button {
+  margin-top: 15px;
+}
+/* 作品集*/
+.gallery {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.gallery-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 300px;
+  border-radius: 15px;
+}
+
+/*浮動聯絡*/
+.floating-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+.float-btn {
+  padding: 12px 18px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: 0.3s;
+  backdrop-filter: blur(10px);
+  letter-spacing: 1px;
+}
+
+.float-btn:hover {
+  transform: scale(1.1);
+}
+
+
+/* LINE */
+.float-btn.line {
+  background: #06c755;
+}
+
+/* IG */
+.float-btn.ig {
+  background: linear-gradient(45deg, #feda75, #d62976, #962fbf);
+}
+.floating-buttons {
+  animation: fadeIn 1s ease;
+}
+/* Threads 按鈕（極簡高級） */
+.float-btn.threads {
+  background: black;
+  color: white;
+  border: 1px solid black;
+}
+
+/* Hover 反轉效果（很關鍵） */
+.float-btn.threads:hover {
+  background: white;
+  color: black;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+}
+/*contact*/
+.contact {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.contact h2 {
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.contact-link:hover {
+  color: #d62976;
+}
